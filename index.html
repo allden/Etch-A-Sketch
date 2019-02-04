@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Etch-A-Sketch</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #e14468;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            display: grid;
+            height: 600px;
+            width: 600px;
+        }
+
+        .main-container {
+            position: relative;
+            top: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .box {
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 1rem;
+        }
+
+        button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border: 0;
+            border-radius: 0;
+            background: #e14468;
+            color: #fff;
+            transition: 0.5s;
+        }
+        button:hover {
+            background: #ff5c81;
+        }
+
+        .nav {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+        }
+
+        .nav-box {
+            width: 600px;
+        }
+        
+        header {
+            background: #ff5c81;
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Etch-A-Sketch</h1>
+            <p>Draw on the Canvas!</p>
+        </header>
+        <div class="nav-box">
+            <div class="nav">
+                <button class='reset'>Reset</button>
+                <button class='new'>New</button>
+                <button class='rainbow'>Rainbow</button>
+                <button class='black'>Black</button>
+            </div>
+        </div>
+        <div class="container"></div>
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
